@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>{% block title %}Atletismo UNCuyo{% endblock %}</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      <meta charset="utf-8">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="{% static 'atletismo\script.js' %}"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="{% static 'atletismo/styles.css' %}" rel="stylesheet">
+      {% block script %}
+      {% endblock %}
+  </head>
+  <body>
+      <header class="banner">
+          <nav class="navbar navbar-expand-sm bg-light">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'atletismo\media\IMG_9545.PNG' %}" alt="" style="width: 40%; margin-left: 10%;"></a>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sumate' %}">Disciplinas</a>
+                  </li>
+                  <li class="nav-item">
+                    <h6 style="color: rgb(52, 201, 52); line-height: 1.5;" class="nav-link contacto">Contacto</h6>
+                    <ul class="dropdown-menu whatsapp">
+                      <li><span class="dropdown-item-text">Miguel Leiva</span></li>
+                      <li><span class="dropdown-item-text">+54 9 2614 68-1436</span></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link logoig" href="https://www.instagram.com/atletismo.uncuyo/"><img src="{% static 'atletismo\media\logoig.png'%}" alt="" style="width: 26px;"></a>
+                  </li>
+                  <ul class="navbar-nav ms-auto poronga">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link btn-lg boton-dd" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="dd-logo" src="https://worldathletics.org/static/hamburger-menu.svg" alt="">
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="navbarDropdown">
+                        <button style="color: rgb(52, 201, 52)" type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#myModal">
+                          Horarios
+                        </button>
+                        <a class="dropdown-item" href="{% url 'fotos' %}">Fotos de Torneos</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfWmYnDPFaAWMiYabSwx7fNTYL0y09DGv8HTuOelwNuXbMdIA/viewform">Inscripción a Torneos por AMA</a>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </nav>
+            <div class="modal fade" id="myModal">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Horarios</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Pista: Lunes, miércoles y viernes (16hs a 18hs o 18hs a 20hs)</p>
+                    Gimnasio: Martes, jueves (16hs a 18hs) y sábado (10hs a 12hs)
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Volver</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </header>
+      <div class="body-index">
+          {% block body %}
+          {% endblock %}
+      </div>
+      <footer>
+        <a class="navbar-brand logo-unc" href="{% url 'index' %}"><img src="{% static 'atletismo\media\logocopia.PNG' %}" alt=""></a>
+        <div class="footer-nav">
+          <h4>Contactanos</h4>
+          <hr>
+            <a class="nav-link" href="https://www.google.com/search?rlz=1C1CHBF_esAR950AR950&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=AOaemvLXE3qQ7tVgfBlXx8M94ADDSY2Qcg:1636501770447&q=pista+provincial+de+atletismo+mendoza&rflfq=1&num=10&ved=2ahUKEwjTwM2VvIz0AhVDqpUCHSwtAI4QtgN6BAgGEAQ#rlfi=hd:;si:4894960948216094655;mv:[[-32.88295237985082,-68.87514531636351],[-32.887475222896555,-68.88529479527587]]">Dirección Pista Provincial de Atletismo</a>
+            <a class="nav-link" href="https://www.instagram.com/atletismo.uncuyo/">Instagram</a>
+            <h6 class="nav-link contacto">Whatsapp</h6>
+            <ul class="dropdown-menu whatsapp">
+              <li><span class="dropdown-item-text">Miguel Leiva</span></li>
+              <li><span class="dropdown-item-text">+54 9 2614 68-1436</span></li>
+            </ul>
+        </div>
+        <div class="footer-nav">
+          <h4>Club UNCuyo</h4>
+          <hr>
+          <a class="nav-link" href="https://deportes.uncuyo.edu.ar/">Página Club UNCuyo</a>
+          <h6 class="nav-link">Centro Universitario, M5502JMA. Mendoza, Argentina</h6>
+          <h6 class="nav-link">+54 261 4135000- internos: 4091 / 3905 / 3494.</h6>
+          <h6 class="nav-link">Directo +54 261 4494091</h6>
+        </div>
+      </footer>
+  </body>

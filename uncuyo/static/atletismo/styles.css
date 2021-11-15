@@ -1,0 +1,401 @@
+body, html {margin: 0; padding: 0; overflow-x: hidden;}
+.body-index{
+    margin-bottom: -30px;
+}
+
+@font-face {
+    font-family: 'World Athletics';
+    src: url(WorldAthletics-Regular.ttf);
+}
+.logoig{
+    vertical-align: bottom;
+    margin: auto;
+    z-index: -7;
+}
+.poronga{
+    margin-left: 4%;
+}
+.navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+}
+body{
+    font-family: 'World Athletics', sans-serif;
+}
+.navbar-nav{
+    margin-right: 5%;
+}
+.whatsapp{
+    display: none;
+}
+.contacto{
+    line-height: 1.0;
+}
+.contacto:hover + .whatsapp{
+    display: block;
+}
+.dd-logo{
+    vertical-align: text-top;
+}
+.navbar-nav a{
+    color: rgb(52, 201, 52);
+}
+.carousel .carousel-item {
+    height: 400px;
+}  
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+}
+.sumate{
+    background-color: #0d6efd;
+    display: flex;
+}
+.sumate-titulo{
+    color: white;
+    justify-content: center;
+    width: auto;
+    margin: auto;
+    text-align: center;
+    flex: 2;
+}
+.sumate-imagen{
+    position: relative;
+    float: right;
+    flex:1;
+    left: 13px;
+}
+.resultados{
+    background-color: white;
+    display: flex;
+    padding: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+.resultados-dd{
+    border-left: 1px solid black;
+    justify-content: center;
+    margin-left: 150px;
+}
+.boton-dd{
+    width: 20px;
+}
+.planes{
+    width: 400px;
+}
+li {
+    list-style-type: none;
+}
+.sumate-title{
+    font-size: 50px;
+}
+.sumate-subtitle{
+    font-size: 40px;
+}
+.fotos-torneo-img{
+    left: -13px; 
+    margin-left: 0px;
+}
+.our-sport{
+    margin: 30px;
+    padding-bottom: 30px;
+}
+.pruebas-titulo-general{
+    color: white; 
+    font-size: 4.125rem; 
+    font-weight: 700; 
+    padding-left: 40px;
+    padding-top:30px;
+    
+}
+.disciplina-title{
+    color: white; 
+    font-size: 3.125rem; 
+    font-weight: 700; 
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    z-index: 2;
+}
+.overlay{
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    background: linear-gradient(
+    180deg, rgba(255,255,255,0) 10%, rgba(38,38,38,0.8939950980392157) 79%);
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 10%, rgba(38, 38, 38, 0.894) 79%);
+}
+.overlay::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.deporte-img{
+    display: block;
+}
+.disciplina{
+    display: flex;
+}
+.disciplina-img-card{
+    position: relative;
+    width: 700px;
+    display: block;
+    display: flex;
+    height: 500px;
+    margin-top: 20px;
+}
+.deporte-card{
+    border: none;
+    background:none
+}
+.deporte-titulo{
+    position: absolute;
+    color: white;
+    bottom: 0;
+    background: linear-gradient(
+    180deg, rgba(255,255,255,0) 10%, rgba(38,38,38,0.8939950980392157) 79%);
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 10%, rgba(38, 38, 38, 0.894) 79%);
+    width: 100%;
+}
+.prueba-link{
+    text-decoration: none;
+    color: white;
+}
+.prueba-link:hover{
+    color:rgb(52, 201, 52);
+}
+footer{
+    background-color: rgba(38, 38, 38, 0.894);
+    padding: 2em;
+    padding-left: 4em;
+    display: flex;
+    padding-bottom: 4em;
+}
+.footer-nav{
+    float: left;
+    padding-left: 4em;
+    color: white
+}
+.footer-nav a{
+    color: white;
+}
+.footer-nav h6{
+    color: white;
+}
+.navbar-brand{
+    margin-bottom: 2em;
+    width: auto;
+}
+.disciplina-img{
+    width: 100%;
+    position: relative;
+    min-height: 100%;
+}
+.disciplina-desc{
+    flex: 1;
+    padding: 20px;
+    line-height: 1.5;
+    margin-right: 4%;
+}
+.record-head{
+    border: black 1px ridge;
+    font-size: 20px;
+}
+.record-rectang{
+    padding: 10px;
+    border: black 1px ridge;
+    text-align: center;
+    width: 9%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.plan-dd{
+    display: none;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    bottom: 0;
+    width: 30%;
+    
+}
+.plan-dd-item{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.plan-title{
+    width: 100%;   
+}
+.plan-title2{
+    font-size: 3.125rem;
+}
+.plan-title:hover + .plan-dd{
+    display: block;
+}
+.plan-dd:hover{
+    display: block;
+}
+@media only screen and (max-width: 1070px){
+    .disciplina{
+        flex-direction: column;
+    }
+    .img-fluid{
+        max-width: 110%;
+    }
+    .fotos-torneo-img{
+        left: 13px; 
+    }
+    .sumate-titulo{
+        padding: 5%;
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 870px) {
+	.boton-dd{
+        margin-left: 100%;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .carousel-item img {
+        left: -40px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .sumate{
+        position: relative;
+        height: auto;
+        flex-direction: column;
+    }
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+    .fotos-torneo-img{
+        margin-bottom: 20px;
+    }
+    .footer-nav{
+        padding: 2em;
+    }
+    .logo-unc{
+        display: none;
+    }
+    .fotos-torneo{ 
+        padding-bottom: 20px
+    }
+    footer{
+        padding: 0;
+        padding-left: 0;
+        flex-direction: column;
+    }
+    .navbar-nav{
+        flex-direction: row;
+        margin-left: 10%;
+        margin-right: 0%;
+    }
+    .sumate-imagen{
+        position: relative;
+        float: right;
+        flex:1;
+        left: 13px;
+    }
+    .carousel-item img {
+        min-height: 200px;
+        min-width: 420px;
+    }
+    .carousel .carousel-item {
+        height: 200px;
+    }
+    .resultados{
+        display: flex;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .resultados-dd{
+        border-left: 1px solid black;
+        justify-content: center;
+        margin-left: 10%;
+    }
+    .sumate-title{
+        font-size: 30px;
+    }
+    .sumate-subtitle{
+        font-size: 20px;
+    }
+    .disciplina-img-card{
+        width: 100%;
+        height: 50%;
+    }
+    .disciplina-img{
+        width: 100%;
+    }
+    .pruebas-titulo-general{
+        font-size: 2.125rem;
+    }
+    .plan-title2{
+        font-size: 1.25rem;
+    }
+    .plan-dd{
+        width: 50%;
+        right: -1.25rem;
+    }
+    .navbar-brand{
+        margin-bottom: 0.7rem;
+    }
+}
+
+.animate {
+    animation-duration: 0.7s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+  
+@keyframes slideIn {
+    0% {
+    transform: translateY(1rem);
+    opacity: 0;
+    }
+
+    100% {
+    transform: translateY(0rem);
+    opacity: 1;
+    }
+
+    0% {
+    transform: translateY(1rem);
+    opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+    }
+
+    100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+    }
+
+    0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+    }
+}
+
+.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+}

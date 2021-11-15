@@ -1,0 +1,119 @@
+{% extends 'uncuyo/layout.html' %}
+{% load static %}
+{% block body %}
+<div style="background-color: rgba(52, 201, 52, 0.753);">
+    <h1 class="pruebas-titulo-general">Planes de Entrenamiento</h1>
+    <div class="row row-cols-1 row-cols-md-2 g-4 our-sport">
+        <div class="col">
+            <div class="card h-100 deporte-card">
+                <div class="deporte-img ">
+                    <img src="{% static 'atletismo\media\_MG_2125.JPG' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body deporte-titulo plan-title">
+                    <h5 class="card-title plan-title2">Pretemporada</h5>
+                </div>
+                <div class="plan-dd animate slideIn">
+                    <a class="dropdown-item plan-dd-item" href="{% static 'planes de entrenamiento\pretemporada\GENERAL Lanzadores NOVIEMBRE DICIEMBRE 2021.docx' %}">Lanzadores</a>
+                    <div class="dropdown-divider" style="margin: 0;"></div>
+                    <a class="dropdown-item plan-dd-item" href="{% static 'planes de entrenamiento\pretemporada\Vallas cortas 8-21.docx' %}">Pista</a>
+                    <div class="dropdown-divider" style="margin: 0;"></div>
+                    <a class="dropdown-item plan-dd-item" href="{% static 'planes de entrenamiento\pretemporada\GENERAL saltadores NOVIEMBRE DICIEMBRE 2021.docx' %}">Saltadores</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <a href="{% static 'planes de entrenamiento\lanzamientos\COMPETENCIA Lanzadores OCTUBRE NOVIEMBRE 2021.docx' %}">
+                <div class="card h-100 deporte-card">
+                    <div class="deporte-img">
+                        <img src="{% static 'atletismo\media\IMG_2566.jpg' %}" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body deporte-titulo">
+                        <h5 class="card-title  plan-title2">Lanzamientos</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{% static 'planes de entrenamiento\saltos\competencia Saltadores Octubre Noviembre 2021.docx' %}">
+                <div class="card h-100 deporte-card">
+                    <div class="deporte-img">
+                        <img src="{% static 'atletismo\media\IMG_2292c.jpg' %}" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body deporte-titulo">
+                        <h5 class="card-title plan-title2">Saltos</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{% static 'planes de entrenamiento\velocidad\Trabajos Velocistas Corta 9.docx' %}">
+                <div class="card h-100 deporte-card">
+                    <div class="deporte-img">
+                        <img src="{% static 'atletismo\media\_MG_4798.JPG' %}" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body deporte-titulo">
+                        <h5 class="card-title plan-title2">Velocidad Corta</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{% static 'planes de entrenamiento\prolongada\Velocidad prolongada 8.docx' %}">
+                <div class="card h-100 deporte-card">
+                    <div class="deporte-img">
+                        <img src="{% static 'atletismo\media\_MG_7168.JPG' %}" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body deporte-titulo">
+                        <h5 class="card-title plan-title2">Velocidad Prolongada</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <div class="card h-100 deporte-card">
+                <div class="deporte-img">
+                    <img src="{% static 'atletismo\media\_MG_6938.JPG' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body deporte-titulo plan-title">
+                    <h5 class="card-title plan-title2">Vallas</h5>
+                </div>
+                <div class="plan-dd animate slideIn">
+                    <a class="dropdown-item plan-dd-item" href="{% static 'planes de entrenamiento\vallas\Vallas cortas 7.docx' %}">100/110m CV</a>
+                    <div class="dropdown-divider" style="margin: 0;"></div>
+                    <a class="dropdown-item plan-dd-item" href="{% static 'planes de entrenamiento\vallas\Vallas largas 7.docx' %}">400m CV</a>
+                </div>
+            </div>  
+        </div>
+        <div class="col">
+            <div class="card h-100 deporte-card">
+                <div class="deporte-img">
+                    <img src="{% static 'atletismo\media\MG_2528.jpg' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body deporte-titulo plan-title">
+                    <h5 class="card-title plan-title2">Medio Fondo / Fondo</h5>
+                </div>
+                <div class="plan-dd animate slideIn">
+                    <a class="dropdown-item plan-dd-item" href="{% static 'planes de entrenamiento\fondo\Plan medio Fondo 8.docx' %}">Medio Fondo</a>
+                    <div class="dropdown-divider" style="margin: 0;"></div>
+                    <a class="dropdown-item plan-dd-item" href="{% static 'planes de entrenamiento\fondo\Fondo octubre.docx' %}">Fondo</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 deporte-card">
+                <div class="deporte-img">
+                    <img src="{% static 'atletismo\media\_MG_5137.JPG' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body deporte-titulo plan-title">
+                    <h5 class="card-title plan-title2">Gimnasio</h5>
+                </div>
+                <div class="plan-dd animate slideIn">
+                    <a class="dropdown-item plan-dd-item" href="{% static 'planes de entrenamiento\gimnasio\tabla relacion intensidad volumen.xls' %}">Tabla RM</a>
+                    <div class="dropdown-divider" style="margin: 0;"></div>
+                    <a class="dropdown-item plan-dd-item" href="{% static 'planes de entrenamiento\gimnasio\GymCompetenciaSeptiembreOctubre2021.xlsx' %}">Plan de Gimnasio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

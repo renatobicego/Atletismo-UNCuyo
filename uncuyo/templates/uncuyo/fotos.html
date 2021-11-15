@@ -1,0 +1,30 @@
+{% extends 'uncuyo/layout.html' %}
+{% load static %}
+
+{% block body %}
+<div style="background-color: #161616bb;">
+    <h1 class="pruebas-titulo-general">Fotos de Torneos</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4 our-sport">
+        {% for torneo in torneos %}
+        <div class="col">
+            <div class="card h-100 deporte-card">
+                <div class="deporte-img">
+                    <img src="{{torneo.image_cover.url}}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body deporte-titulo">
+                    <h5 class="card-title">{{torneo.nombre}}</h5>
+                    <p class="card-text">
+                        {{torneo.fecha}}
+                        {% for url in fotos %}
+                            {% if url.torneo_id.nombre == torneo.nombre %}
+                                |<a href="{{url.url}}" class="prueba-link"> {{url.nombre}} </a> 
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

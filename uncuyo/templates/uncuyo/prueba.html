@@ -1,0 +1,50 @@
+{% extends "uncuyo/layout.html" %}
+{% load static %}
+{% block body %}
+<div class="disciplina" style="margin-bottom: 30px;">
+    <div class="col-md-6 deporte-img disciplina-img-card">
+        <div class="overlay"></div>
+        <img class="disciplina-img" src="{{media.image.url}}" alt="a">
+        <h1 class="disciplina-title">{{prueba.nombre}}</h1>
+    </div>
+    <div class="col-md-12 disciplina-desc">
+        <h4 style="margin-bottom: 20px;">¿Cómo es la disciplina?</h4>
+        {{prueba.descripción}}
+        <h5 style="margin-top: 15px; margin-bottom: 15px;">Récord/s Mundial/es</h5>
+        <table>
+            <thead class="record-head">
+              <tr>
+                {% if prueba.abr == 'heptatlón' %}
+                    <th class="record-rectang">{{prueba.atletaf}}</th>
+                {% elif prueba.abr == 'decatlón'%}
+                    <th class="record-rectang">{{prueba.atleta}}</th>
+                {% else %}
+                    <th class="record-rectang">{{prueba.atleta}}</th>
+                    <th class="record-rectang">{{prueba.atletaf}}</th>
+                {% endif %}
+              </tr>
+            </thead>
+            <tbody class="record-head">
+              <tr>
+                {% if prueba.abr == 'heptatlón' %}
+                    <td class="record-rectang" style="color: rgb(52, 201, 52)">{{prueba.frecord}} puntos</td>
+                {% elif prueba.abr == 'decatlón'%}
+                    <td class="record-rectang" style="color: #0d6efd">{{prueba.record}} puntos</td>
+                {% else %}
+                    {% if pista == true %}
+                        <td class="record-rectang" style="color: #0d6efd">{{prueba.record}} s</td>
+                        <td class="record-rectang" style="color: rgb(52, 201, 52)">{{prueba.frecord}} s</td>
+                    {% else %}
+                        <td class="record-rectang" style="color: #0d6efd">{{prueba.record}} m</td>
+                        <td class="record-rectang" style="color: rgb(52, 201, 52)">{{prueba.frecord}} m</td>
+                    {% endif %}
+                {% endif %}
+              </tr>
+            </tbody>
+          </table>
+        
+        
+        
+    </div>
+</div>
+{% endblock %}

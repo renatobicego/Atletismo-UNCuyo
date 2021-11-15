@@ -1,0 +1,117 @@
+{% extends "uncuyo/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div style="background-color: #0d6dfdbb;">
+    <h1 class="pruebas-titulo-general">Pruebas</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4 our-sport">
+        <div class="col">
+            <div class="card h-100 deporte-card">
+                <div class="deporte-img">
+                    <img src="{% static 'atletismo\media\_MG_3975.JPG' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body deporte-titulo">
+                    <h5 class="card-title">Lanzamientos</h5>
+                    <p class="card-text">
+                        <a href="{% url 'prueba' 'bala' %}" class="prueba-link">Bala</a> / 
+                        <a href="{% url 'prueba' 'jabalina' %}" class="prueba-link">Jabalina</a> / 
+                        <a href="{% url 'prueba' 'martillo' %}" class="prueba-link">Martillo</a> / 
+                        <a href="{% url 'prueba' 'disco' %}" class="prueba-link">Disco</a>
+                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 deporte-card">
+                <div class="deporte-img">
+                    <img src="{% static 'atletismo\media\_MG_4045.JPG' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body deporte-titulo">
+                    <h5 class="card-title">Velocidad</h5>
+                    <p class="card-text">
+                        <a href="{% url 'prueba' '100m' %}" class="prueba-link">100m</a> / 
+                        <a href="{% url 'prueba' '200m' %}" class="prueba-link">200m</a> / 
+                        <a href="{% url 'prueba' '400m' %}" class="prueba-link">400m</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 deporte-card">
+                <div class="deporte-img">
+                    <img src="{% static 'atletismo\media\fabri.JPG' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body deporte-titulo">
+                    <h5 class="card-title">Medio Fondo/Fondo</h5>
+                    <p class="card-text">
+                        <a href="{% url 'prueba' '800m' %}" class="prueba-link">800m</a> / 
+                        <a href="{% url 'prueba' '1500m' %}" class="prueba-link">1500m</a> / 
+                        <a href="{% url 'prueba' '5000m' %}" class="prueba-link">5000m</a> / 
+                        <a href="{% url 'prueba' '10000m' %}" class="prueba-link">10000m</a> / 
+                        <a href="{% url 'prueba' '3000m' %}" class="prueba-link">3000m con Obstáculos</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 deporte-card">
+                <div class="deporte-img">
+                    <img src="{% static 'atletismo\media\guillevallas.JPG' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body deporte-titulo">
+                    <h5 class="card-title">Vallas</h5>
+                    <p class="card-text">
+                        <a href="{% url 'prueba' '100cv' %}" class="prueba-link">100 c/v</a> / 
+                        <a href="{% url 'prueba' '110cv' %}" class="prueba-link">110 c/v</a> / 
+                        <a href="{% url 'prueba' '400cv' %}" class="prueba-link">400 c/v</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 deporte-card">
+                <div class="deporte-img">
+                    <img src="{% static 'atletismo\media\IMG_3667.JPG' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body deporte-titulo">
+                    <h5 class="card-title">Saltos</h5>
+                    <p class="card-text">
+                        <a href="{% url 'prueba' 'alto' %}" class="prueba-link">Alto</a> / 
+                        <a href="{% url 'prueba' 'largo' %}" class="prueba-link">Largo</a> / 
+                        <a href="{% url 'prueba' 'garrocha' %}" class="prueba-link">Garrocha</a> / 
+                        <a href="{% url 'prueba' 'triple' %}" class="prueba-link">Triple</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 deporte-card">
+                <div class="deporte-img">
+                    <img src="{% static 'atletismo\media\lupe.JPG' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body deporte-titulo">
+                    <h5 class="card-title">Pruebas Combinadas</h5>
+                    <p class="card-text">
+                        <a href="{% url 'prueba' 'heptatlón' %}" class="prueba-link">Heptatlón</a> / 
+                        <a href="{% url 'prueba' 'decatlón' %}" class="prueba-link">Decatlón</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 deporte-card">
+                <div class="deporte-img">
+                    <img src="{% static 'atletismo\media\juliposta.JPG' %}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body deporte-titulo">
+                    <h5 class="card-title">Postas</h5>
+                    <p class="card-text">
+                        <a href="{% url 'prueba' '4x100m' %}" class="prueba-link">4x100m</a> / 
+                        <a href="{% url 'prueba' '4x400m' %}" class="prueba-link">4x400m</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

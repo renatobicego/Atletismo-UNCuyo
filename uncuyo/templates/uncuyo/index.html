@@ -1,0 +1,97 @@
+{% extends "uncuyo/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+    
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner" >
+            <div class="carousel-item active">
+                <img src="{% static 'atletismo\media\MG_2512.jpg' %}" alt="Los Angeles" class="d-block w-100">
+                <a class="nav-link" href="{% url 'fotos' %}">
+                    <div class="carousel-caption">
+                        <h3>Copa Nacional U23</h3>
+                        <p>¡Resultados y fotos del evento!</p>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'atletismo\media\_MG_2998.JPG' %}" alt="Chicago" class="d-block w-100">
+                <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfWmYnDPFaAWMiYabSwx7fNTYL0y09DGv8HTuOelwNuXbMdIA/viewform">
+                    <div class="carousel-caption">
+                        <h3>Inscripciones a Torneos por AMA</h3>
+                        <p>Rellenar formulario para inscribirte al próximo torneo</p>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'atletismo\media\IMG_3560.JPG' %}" alt="New York" class="d-block w-100">
+                <a class="nav-link" href="{% url 'planes' %}">
+                    <div class="carousel-caption">
+                        <h3>Pretemporada</h3>
+                        <p>Planes de entrenamiento</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <div class="container-fluid resultados">
+        <div class="row">
+            <div class="col-lg-6" style="flex: 1;">
+                <li class="nav-item dropdown" >
+                    <a class="nav-link dropdown-toggle resultados-dd" href="" role="button" data-bs-toggle="dropdown">Resultados de Torneos</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://www.resultadosonline.org/web/todos-los-torneos.php">CADA</a></li>
+                      <li><a class="dropdown-item" href="http://www.ama-mza.com.ar/">AMA</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="col-lg-6" style="flex: 1;">
+                <a class="nav-link resultados-dd planes" href="{% url 'planes' %}">Planes de Entrenamiento</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid sumate">
+        <div class="row">
+            <div class="col-lg-6 sumate-titulo">
+                <a class="nav-link" href="{% url 'sumate' %}" style="color: white">
+                    <h1 class="sumate-title">¡Sumate!</h1>
+                    <br>
+                    <h2 class="sumate-subtitle">Nuestro Deporte</h2>
+                </a>
+            </div>
+            <div class="col-lg-6" >
+                <img src="{% static 'atletismo\media\_MG_5069.JPG' %}" alt="imagen" class="sumate-imagen img-fluid">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid sumate fotos-torneo" style="background-color: rgb(52, 201, 52); margin-bottom: 30px;">
+        <div class="row">
+            <div class="col-lg-6" >
+                <img src="{% static 'atletismo\media\_MG_4843.JPG' %}" alt="imagen" class="sumate-imagen img-fluid fotos-torneo-img">
+            </div>
+            <div class="col-lg-6 sumate-titulo">
+                <a class="nav-link" href="{% url 'fotos' %}" style="color: white">
+                    <h1 class="sumate-title">Fotos de Torneos</h1>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
