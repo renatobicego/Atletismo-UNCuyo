@@ -1,4 +1,4 @@
-Atletismo UNCuyo
+## Atletismo UNCuyo
 I´m Renato Bicego, an athlete from Universidad Nacional de Cuyo. In this project, I wanted to
 use all my knowledge learned in this course to develop a website to my track and field team,
 to facilitate access to media content and competitions information, and also invite people to join us. 
